@@ -21,7 +21,7 @@ namespace webAPI02.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddProduto([FromBody]CreateProdutoDto produtoDto)
+        public IActionResult AddProduto([FromForm]CreateProdutoDto produtoDto)
         {
             var produto = _mapper.Map<Produtos>(produtoDto);
              _db.AddProduto(produto);
@@ -44,7 +44,7 @@ namespace webAPI02.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateProduto(int id, UpdateProdutoDto produtoDto)
+        public IActionResult UpdateProduto(int id,[FromForm] UpdateProdutoDto produtoDto)
         {
             _db.UpdateProdutos(id, produtoDto);
             return NoContent();
