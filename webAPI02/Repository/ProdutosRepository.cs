@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using webAPI02.Infraestrutura;
-using webAPI02.Infraestrutura.Dto;
+using webAPI02.Infraestrutura.Dto.ProdutoDto;
 using webAPI02.Models;
 using webAPI02.Repository.Interfaces;
 

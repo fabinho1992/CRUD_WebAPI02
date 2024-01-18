@@ -1,6 +1,6 @@
 ﻿
 using AutoMapper;
-using webAPI02.Infraestrutura.Dto;
+using webAPI02.Infraestrutura.Dto.ProdutoDto;
 using webAPI02.Models;
 
 namespace webAPI02.Profiles

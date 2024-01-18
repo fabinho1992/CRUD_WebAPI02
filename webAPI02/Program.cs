@@ -13,6 +13,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IProdutoRepository, ProdutosRepository>();// AQUI FAÇO A INJEÇÃO DE DEPENDENCIA PARA QUE POSSA USAR O PADRÃO REPOSITORY NA CONTROLLER
+builder.Services.AddTransient<IClienteRepository, ClienteRepository>();
+builder.Services.AddTransient<IVendedorRepository, VendedorRepository>();
+builder.Services.AddTransient<IVendaRepository, VendaRepository>();
 
 var connectionString = builder.Configuration.GetConnectionString("ConexaoProdutos");
 builder.Services.AddDbContext<DbContextControle>( op => op.UseSqlServer(connectionString));
