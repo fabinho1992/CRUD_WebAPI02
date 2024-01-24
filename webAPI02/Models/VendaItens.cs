@@ -11,15 +11,15 @@ namespace webAPI02.Models
         public double Valor { get; set; }
         [Required]
         public double Quantidade { get; set; }
-        //[Required]
-        //public int ProdutoId { get; set; }
-        //public virtual Produtos Produtos { get; set; }
-        //[Required]
-        //public int VendaId { get; set; }
-        //public virtual Venda Venda { get; set; }
+        [Required]
+        public int ProdutoId { get; set; }
+        public virtual Produtos Produto { get; set; }
+        [Required]
+        public int VendaId { get; set; }
+        public virtual Venda Venda { get; set; }
 
-        
-        
+
+
 
 
     }

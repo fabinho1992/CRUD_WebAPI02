@@ -31,7 +31,7 @@ namespace webAPI02.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var produtos = _mapper.Map<List<ReadProdutoDto>>( _db.GetProdutos());
+            var produtos =  _db.GetProdutos();
             return Ok(produtos);
         }
 

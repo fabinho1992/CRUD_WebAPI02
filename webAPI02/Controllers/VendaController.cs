@@ -10,6 +10,7 @@ namespace webAPI02.Controllers
     {
         private readonly IVendaRepository _context;
 
+
         public VendaController(IVendaRepository context)
         {
             _context = context;
@@ -25,7 +26,10 @@ namespace webAPI02.Controllers
         [HttpGet]
         public IActionResult GetVenda()
         {
+
             return Ok(_context.GetVendedores());
         }
+
+       
     }
 }

@@ -6,7 +6,7 @@ namespace webAPI02.Repository.Interfaces
     public interface IProdutoRepository
     {
         void AddProduto(Produtos produto);
-        IEnumerable<Produtos> GetProdutos();
+        IEnumerable<ReadProdutoDto> GetProdutos();
         Produtos GetProdutosId(int id);
         void UpdateProdutos(int id, UpdateProdutoDto produtos);
         void DeleteProdutos(int id);

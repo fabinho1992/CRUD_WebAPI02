@@ -10,10 +10,10 @@ namespace webAPI02.Extenções
         {
             
 
-            builder.Property(x => x.ClienteId).HasColumnName("id_cliente").IsRequired();
+            
             builder.HasOne(v => v.Cliente).WithMany(c => c.Vendas).HasForeignKey(c => c.ClienteId);
 
-            builder.Property(x => x.VendedorId).HasColumnName("id_vendedor").IsRequired();
+            
             builder.HasOne(v => v.Vendedor).WithMany(v =>v.Vendas).HasForeignKey(v => v.VendedorId);
         }
     }

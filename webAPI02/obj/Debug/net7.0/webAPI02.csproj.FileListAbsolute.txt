@@ -155,3 +155,7 @@ C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\ob
 C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\obj\Debug\net7.0\webAPI02.csproj.CopyComplete
 C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\obj\Debug\net7.0\webAPI02.genruntimeconfig.cache
 C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\obj\Debug\net7.0\ref\webAPI02.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Castle.Core.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll

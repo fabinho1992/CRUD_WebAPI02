@@ -7,5 +7,7 @@ namespace webAPI02.Repository.Interfaces
         void AddVenda(CreateVendaDto vendaDto);
 
         IEnumerable<ReadVendaDto> GetVendedores();
+
+        
     }
 }

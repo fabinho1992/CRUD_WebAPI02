@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using webAPI02.Infraestrutura;
 using webAPI02.Infraestrutura.Dto.ProdutoDto;
 using webAPI02.Models;
@@ -32,15 +33,15 @@ namespace webAPI02.Repository
             _context.SaveChanges();
         }
 
-        public IEnumerable<Produtos> GetProdutos()
+        public IEnumerable<ReadProdutoDto> GetProdutos()
         {
-            var produtos =  _context.Produtos.ToList();
+            var produtos = _mapper.Map<List<ReadProdutoDto>>( _context.Produtos.Include(x => x.VendaItens).ToList());
             return produtos;
         }
 
         public Produtos GetProdutosId(int id)
         {
-            var produto = _context.Produtos.FirstOrDefault(x => x.Id == id);
+            var produto = _context.Produtos. FirstOrDefault(x => x.Id == id);
             return produto;
         }
 

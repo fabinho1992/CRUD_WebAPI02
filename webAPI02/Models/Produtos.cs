@@ -12,6 +12,7 @@ namespace webAPI02.Models
         public double Preco { get; set; }
         [Required]
         public string Categoria { get; set; }
+        public virtual ICollection<VendaItens> VendaItens { get; set; }
         
 
     }

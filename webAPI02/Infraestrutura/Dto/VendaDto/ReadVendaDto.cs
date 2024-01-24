@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using webAPI02.Infraestrutura.Dto.ClienteDto;
 using webAPI02.Models;
 
 namespace webAPI02.Infraestrutura.Dto.VendaDto
@@ -7,6 +8,8 @@ namespace webAPI02.Infraestrutura.Dto.VendaDto
     {
         public int Id { get; set; }
         public int ClienteId { get; set; }
+        
+       
         public int VendedorId { get; set; }
     }
 }

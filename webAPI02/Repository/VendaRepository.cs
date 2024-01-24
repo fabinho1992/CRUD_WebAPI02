@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using webAPI02.Infraestrutura;
 using webAPI02.Infraestrutura.Dto.VendaDto;
 using webAPI02.Models;
@@ -24,9 +25,12 @@ namespace webAPI02.Repository
             _context.SaveChanges();
         }
 
+       
+
         public IEnumerable<ReadVendaDto> GetVendedores()
         {
-            var vendedores = _mapper.Map<List<ReadVendaDto>>(_context.Vendas.ToList());
+            
+            var vendedores = _mapper.Map<List<ReadVendaDto>>(_context.Vendas.Include(x => x.Cliente). ToList());
             return vendedores;
         }
     }

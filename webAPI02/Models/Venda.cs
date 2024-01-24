@@ -14,5 +14,6 @@ namespace webAPI02.Models
         
         public int VendedorId { get; set; }
         public virtual Vendedor Vendedor { get; set; }
+        public virtual ICollection<VendaItens> VendaItens { get; set; }
     }
 }

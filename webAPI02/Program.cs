@@ -16,9 +16,10 @@ builder.Services.AddTransient<IProdutoRepository, ProdutosRepository>();// AQUI 
 builder.Services.AddTransient<IClienteRepository, ClienteRepository>();
 builder.Services.AddTransient<IVendedorRepository, VendedorRepository>();
 builder.Services.AddTransient<IVendaRepository, VendaRepository>();
+builder.Services.AddTransient<IVendaItensRepository, VendaItensRepository>();
 
 var connectionString = builder.Configuration.GetConnectionString("ConexaoProdutos");
-builder.Services.AddDbContext<DbContextControle>( op => op.UseSqlServer(connectionString));
+builder.Services.AddDbContext<DbContextControle>(op => op.UseLazyLoadingProxies().UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
