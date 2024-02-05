@@ -10,6 +10,8 @@ namespace webAPI02.Profiles
         {
             CreateMap<CreateClienteDto, Cliente>();
             CreateMap<Cliente, ReadClienteDto>();
+            CreateMap<Cliente, ReadClienteIdDto>();
+            CreateMap<UpdateClienteDto, Cliente>().ReverseMap();
         }
     }
 }

@@ -1,9 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using webAPI02.Infraestrutura.Dto.VendaItensDto;
+﻿using webAPI02.Infraestrutura.Dto.VendaItensDto;
 
 namespace webAPI02.Infraestrutura.Dto.ProdutoDto
 {
-    public class ReadProdutoDto
+    public class ReadProdutoIdDto
     {
         public int Id { get; set; }
 
@@ -12,6 +11,6 @@ namespace webAPI02.Infraestrutura.Dto.ProdutoDto
         public double Preco { get; set; }
 
         public string Categoria { get; set; }
-        
+        public virtual ICollection<ReadVendaItensDto> VendasItens { get; set; }
     }
 }

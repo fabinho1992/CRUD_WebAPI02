@@ -27,5 +27,12 @@ namespace webAPI02.Controllers
         {
             return Ok(_context.GetVendedor());
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetVendedoresId(int id) 
+        {
+            var vendedor = _context.GetVendedorId(id);
+            return Ok(vendedor);
+        }
     }
 }

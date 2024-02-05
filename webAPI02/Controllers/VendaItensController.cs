@@ -27,5 +27,13 @@ namespace webAPI02.Controllers
         {
             return Ok(_context.GetVendaItensDtos());
         }
+
+        [HttpDelete]
+        public IActionResult DeleteVendaItens(int id)
+        {
+            _context.deleteVendaItens(id);
+            return Ok("Venda Excluida!");
+             
+        }
     }
 }

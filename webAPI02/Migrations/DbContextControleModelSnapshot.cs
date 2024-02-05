@@ -45,7 +45,7 @@ namespace webAPI02.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Clientes", (string)null);
                 });
 
             modelBuilder.Entity("webAPI02.Models.Produtos", b =>
@@ -67,7 +67,7 @@ namespace webAPI02.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Produtos", (string)null);
                 });
 
             modelBuilder.Entity("webAPI02.Models.Venda", b =>
@@ -88,7 +88,7 @@ namespace webAPI02.Migrations
 
                     b.HasIndex("VendedorId");
 
-                    b.ToTable("Vendas");
+                    b.ToTable("Vendas", (string)null);
                 });
 
             modelBuilder.Entity("webAPI02.Models.VendaItens", b =>
@@ -115,7 +115,7 @@ namespace webAPI02.Migrations
 
                     b.HasIndex("VendaId");
 
-                    b.ToTable("VendaItens");
+                    b.ToTable("VendaItens", (string)null);
                 });
 
             modelBuilder.Entity("webAPI02.Models.Vendedor", b =>
@@ -137,7 +137,7 @@ namespace webAPI02.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Vendedores");
+                    b.ToTable("Vendedores", (string)null);
                 });
 
             modelBuilder.Entity("webAPI02.Models.Venda", b =>

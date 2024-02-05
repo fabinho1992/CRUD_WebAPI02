@@ -8,5 +8,6 @@ namespace webAPI02.Repository.Interfaces
         void AddVendaItens(CreateVendaItensDto vendaItensDto );
         IEnumerable<ReadVendaItensDto> GetVendaItensDtos();
         ReadVendaItensDto GetVendaItensId(int id);
+        void deleteVendaItens(int id);
     }
 }

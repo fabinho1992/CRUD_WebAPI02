@@ -19,9 +19,19 @@ namespace webAPI02.Repository
         public void AddVendaItens(CreateVendaItensDto vendaItensDto)
         {
             var venda = _mapper.Map<VendaItens>(vendaItensDto);
+            var produto = _context.Produtos.FirstOrDefault(x => x.Id == venda.ProdutoId);
+            venda.Valor = venda.Quantidade * produto.Preco;
+
             _context.VendaItens.Add(venda);
             _context.SaveChanges();
             
+        }
+
+        public void deleteVendaItens(int id)
+        {
+            var clientes = _context.VendaItens.FirstOrDefault(x => x.Id == id); 
+            _context.VendaItens.Remove(clientes);
+            _context.SaveChanges();
         }
 
         public IEnumerable<ReadVendaItensDto> GetVendaItensDtos()

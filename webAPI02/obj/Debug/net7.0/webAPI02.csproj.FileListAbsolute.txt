@@ -159,3 +159,7 @@ C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bi
 C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\MySqlConnector.dll
 C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\adm\OneDrive\Área de Trabalho\Repositório02\CRUD_WebAPI02\webAPI02\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

@@ -10,8 +10,9 @@ namespace webAPI02.Profiles
         public ProdutoProfile()
         {
             CreateMap<CreateProdutoDto, Produtos>().ReverseMap();
-            CreateMap<Produtos, ReadProdutoDto>().ForMember(X => X.VendasItens, opt => opt.MapFrom(x => x.VendaItens));
+            CreateMap<Produtos, ReadProdutoDto>();
             CreateMap<Produtos, UpdateProdutoDto>().ReverseMap();
+            CreateMap<Produtos, ReadProdutoIdDto>().ForMember(X => X.VendasItens, opt => opt.MapFrom(x => x.VendaItens));
         }
     }
 }

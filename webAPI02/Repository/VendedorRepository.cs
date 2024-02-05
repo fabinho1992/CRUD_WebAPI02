@@ -37,7 +37,8 @@ namespace webAPI02.Repository
 
         public ReadVendedorDto GetVendedorId(int id)
         {
-            throw new NotImplementedException();
+            var vendedor = _context.Vendedores.FirstOrDefault(v => v.Id == id);
+            return _mapper.Map<ReadVendedorDto>(vendedor);
         }
 
         public void UpdateVendedor(int id, UpdateVendedorDto vendedorDto)

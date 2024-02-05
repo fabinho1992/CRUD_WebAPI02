@@ -39,10 +39,10 @@ namespace webAPI02.Repository
             return produtos;
         }
 
-        public Produtos GetProdutosId(int id)
+        public ReadProdutoIdDto GetProdutosId(int id)
         {
             var produto = _context.Produtos. FirstOrDefault(x => x.Id == id);
-            return produto;
+            return _mapper.Map<ReadProdutoIdDto>(produto);
         }
 
         public void UpdateProdutos(int id, UpdateProdutoDto produtoDto)

@@ -4,8 +4,8 @@ namespace webAPI02.Infraestrutura.Dto.VendaItensDto
 {
     public class CreateVendaItensDto
     {
-        [Required]
-        public double Valor { get; set; }
+        //[Required]
+        //public double Valor { get; set; }
         [Required]
         public double Quantidade { get; set; }
         [Required]

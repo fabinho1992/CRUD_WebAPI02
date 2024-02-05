@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Text.Json.Serialization;
 using webAPI02.Infraestrutura;
 using webAPI02.Repository;
 using webAPI02.Repository.Interfaces;
@@ -7,6 +8,10 @@ using webAPI02.Repository.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling =
+                                Newtonsoft.Json.ReferenceLoopHandling.Ignore);// adcionei o NewtonsoftHson para poder autualizar o banco usando o verbo PATCH
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -21,6 +26,7 @@ builder.Services.AddTransient<IVendaItensRepository, VendaItensRepository>();
 var connectionString = builder.Configuration.GetConnectionString("ConexaoProdutos");
 builder.Services.AddDbContext<DbContextControle>(op => op.UseLazyLoadingProxies().UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 var app = builder.Build();
 

@@ -38,9 +38,8 @@ namespace webAPI02.Controllers
         [HttpGet("{id}")]
         public IActionResult GetId(int id) 
         {
-             var produto = _db.GetProdutosId(id);
-            if(produto == null) return NotFound();
-            return Ok(produto);
+            var cliente = _db.GetProdutosId(id);
+            return Ok(cliente);
         }
 
         [HttpPut("{id}")]
